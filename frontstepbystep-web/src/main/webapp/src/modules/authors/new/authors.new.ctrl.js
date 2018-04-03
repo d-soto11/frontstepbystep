@@ -25,7 +25,7 @@
             $rootScope.edit = false;
 
             $scope.data = {};
-            
+
             /**
              * @ngdoc function
              * @name createEditorial

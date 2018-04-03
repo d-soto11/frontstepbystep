@@ -165,12 +165,42 @@ NG_DOCS={
     },
     {
       "section": "api",
+      "id": "login.controller:loginCtrl",
+      "shortName": "loginCtrl",
+      "type": "controller",
+      "moduleName": "login",
+      "shortDescription": "Definición del controlador de Angular del módulo Login. ",
+      "keywords": "$http $rootscope $scope $state accedidos actual al angular api aplicaci atributos autenticar con consultas contiene controlador controller crea cual datos de definen definici definida definido del dependencia desde el en es esta estado este funci funciones function html http inicio injectada injectado la las login los maneja manejar navegaci objeto para procesa pueden recibe referencia scope se ser sesi son toda usando utilizadas utilizando variables",
+      "isDeprecated": false
+    },
+    {
+      "section": "api",
+      "id": "login.controller:logoutCtrl",
+      "shortName": "logoutCtrl",
+      "type": "controller",
+      "moduleName": "login",
+      "shortDescription": "Definición del controlador de cerrar sesión del módulo de Login. ",
+      "keywords": "$rootscope $state actual al api aplicaci autom cargarse cerrar cierra con controlador controller crea cual de definici definida definido del dependencia el en estado injectada la login maneja navegaci para recibe referencia scope se sesi toda",
+      "isDeprecated": false
+    },
+    {
+      "section": "api",
+      "id": "login.module:loginModule",
+      "shortName": "loginModule",
+      "type": "overview",
+      "moduleName": "login",
+      "shortDescription": "Definición del módulo de Angular de Manejo de sesión.",
+      "keywords": "angular api de definici definidos del en estado estados este html listview login logout los mainview manejo module modulo overview sesi son url vistas",
+      "isDeprecated": false
+    },
+    {
+      "section": "api",
       "id": "mainApp.module:mainApp",
       "shortName": "mainApp",
       "type": "overview",
       "moduleName": "mainApp",
       "shortDescription": "Definición del módulo principal de Angular. El módulo encapsula todos los",
-      "keywords": "al angular api aplicaci bootstrap cualquier de definici del dentro el encapsula este externos incluyendo ingresar inicia injectados la los mainapp module momento otros overview por primera principal router son todos vez",
+      "keywords": "acceder al angular api aplicaci bootstrap cualquier cuenta de define definici del dentro el encapsula encuentra est esta este externos funci function haspermissions incluyendo ingresar inicia injectados isauthenticated la los mainapp module momento otros overview para permisos por primera principal router se si son su tiene todos usuario verdadero vez",
       "isDeprecated": false
     },
     {

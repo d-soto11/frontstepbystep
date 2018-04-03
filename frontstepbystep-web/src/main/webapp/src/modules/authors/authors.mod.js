@@ -40,7 +40,6 @@
             var basePath = 'src/modules/authors/';
             var basePathBooks = 'src/modules/books/';
             $urlRouterProvider.otherwise("/authorsList");
-
             $stateProvider.state('authors', {
                 url: '/authors',
                 abstract: true,
@@ -51,6 +50,12 @@
                         controllerAs: 'ctrl'
                     }
                 }
+                ,
+                data: {
+                    requireLogin: false,
+                    roles: ['admin', 'assistant']
+                }
+
             }).state('authorsList', {
                 url: '/list',
                 parent: 'authors',
@@ -85,6 +90,10 @@
                         templateUrl: basePath + '/new/authors.new.html',
                         controller: 'authorNewCtrl'
                     }
+                },
+                data: {
+                    requireLogin: true,
+                    roles: ['admin']
                 }
             }).state('authorUpdate', {
                 url: '/update/{authorId:int}',
@@ -97,6 +106,10 @@
                         templateUrl: basePath + '/new/authors.new.html',
                         controller: 'authorUpdateCtrl'
                     }
+                },
+                data: {
+                    requireLogin: true,
+                    roles: ['admin', 'assistant']
                 }
             }).state('authorDelete', {
                 url: '/delete/{authorId:int}',
@@ -109,6 +122,10 @@
                         templateUrl: basePath + '/delete/author.delete.html',
                         controller: 'authorDeleteCtrl'
                     }
+                },
+                data: {
+                    requireLogin: true,
+                    roles: ['admin']
                 }
             });
         }]);

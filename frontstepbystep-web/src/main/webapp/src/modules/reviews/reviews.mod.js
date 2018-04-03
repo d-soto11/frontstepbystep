@@ -41,6 +41,11 @@
                         templateUrl: basePath + 'reviews.html'
                     }
                 }
+                ,
+                data: {
+                    requireLogin: false,
+                    roles: []
+                }
             }).state('reviewsList', {
                 url: '/list',
                 parent: 'reviews',

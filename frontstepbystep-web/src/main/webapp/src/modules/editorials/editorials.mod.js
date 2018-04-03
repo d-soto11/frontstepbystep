@@ -48,6 +48,11 @@
                         controllerAs: 'ctrl'
                     }
                 }
+                ,
+                data: {
+                    requireLogin: false,
+                    roles: ['admin', 'assistant']
+                }
             }).state('editorialsList', {
                 url: '/list',
                 parent: 'editorials',
@@ -83,6 +88,11 @@
                         controller: 'editorialNewCtrl'
                     }
                 }
+                ,
+                data: {
+                    requireLogin: true,
+                    roles: ['admin']
+                }
             }).state('editorialUpdate', {
                 url: '/update/{editorialId:int}',
                 parent: 'editorials',
@@ -95,6 +105,11 @@
                         controller: 'editorialUpdateCtrl'
                     }
                 }
+                ,
+                data: {
+                    requireLogin: true,
+                    roles: ['admin']
+                }
             }).state('editorialDelete', {
                 url: '/delete/{editorialId:int}',
                 parent: 'editorials',
@@ -106,6 +121,11 @@
                         templateUrl: basePath + '/delete/editorials.delete.html',
                         controller: 'editorialDeleteCtrl'
                     }
+                }
+                ,
+                data: {
+                    requireLogin: true,
+                    roles: ['admin', 'assistant']
                 }
             });
         }]);

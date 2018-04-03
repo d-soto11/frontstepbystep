@@ -1,0 +1,54 @@
+{
+	"info": {
+		"name": "paso5",
+		"_postman_id": "0ea9b3ee-8581-ee0b-eb76-e38c5d5030d8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b4c587a9-19f5-47b8-a489-d6f62da918c7",
+						"type": "text/javascript",
+						"exec": [
+							"var data= JSON.parse(responseBody);",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"username\": \"diegofruizs\",\r\n        \"password\": \"diego123\",\r\n        \"rol\": \"assistant\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/frontstepbystep-web/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"frontstepbystep-web",
+						"api",
+						"login"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

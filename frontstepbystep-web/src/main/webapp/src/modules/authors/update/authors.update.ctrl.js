@@ -83,7 +83,7 @@
 
                 });
             };
-            
+
             /**
              * @ngdoc function
              * @name createAuthor
