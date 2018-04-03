@@ -60,7 +60,7 @@ NG_DOCS={
       "type": "overview",
       "moduleName": "books",
       "shortDescription": "Definición del módulo de Angular de Libros. El módulo encapsula todos los ",
-      "keywords": "accede al angular angularjs api bajo bookdetail books bookslist cial con configuraci configurar controlador controladores correspondiente cuales de definici definido definidos del dependencia descripci detail detailview detalle directamente ejemplo el en encapsula entre es est estado estados este general html informa ini- injecta la las libro libros list lista listview localhost los mainview medio module modulo mostrar necesario overview para por relaci relacionados router se son stateprovider templates todos ui url urls utiliza vista vistas",
+      "keywords": "accede al angular angularjs api bajo bookdetail books bookslist con configuraci configurar controlador controladores correspondiente cuales de definici definido definidos del dependencia detail detailview directamente ejemplo el en encapsula entre es est estado estados este html informa injecta la las libros list listview localhost los mainview medio module modulo mostrar necesario overview para por relaci relacionados router se son stateprovider templates todos ui url urls utiliza vista vistas",
       "isDeprecated": false
     },
     {
@@ -90,7 +90,7 @@ NG_DOCS={
       "type": "overview",
       "moduleName": "editorials",
       "shortDescription": "Definición del módulo de Angular de Editorial. El módulo encapsula todos los ",
-      "keywords": "accede al angular angularjs api bajo books cial con configuraci configurar controlador controladores correspondiente cuales de definici definido definidos del dependencia descripci detail detailview detalle directamente editorial editorialdetail editoriales editorials editorialslist ejemplo el en encapsula entre es est estado estados este general html informa ini- injecta la las libro list lista listview localhost los mainview medio module modulo mostrar necesario overview para por relaci relacionados router se son stateprovider templates todos ui url urls utiliza vista vistas",
+      "keywords": "accede al angular angularjs api bajo books con configuraci configurar controlador controladores correspondiente cuales de definici definido definidos del dependencia detail detailview directamente editorial editorialdetail editoriales editorials editorialslist ejemplo el en encapsula entre es est estado estados este html informa injecta la las list listview localhost los mainview medio module modulo mostrar necesario overview para por relaci relacionados router se son stateprovider templates todos ui url urls utiliza vista vistas",
       "isDeprecated": false
     },
     {
@@ -101,6 +101,26 @@ NG_DOCS={
       "moduleName": "mainApp",
       "shortDescription": "Definición del módulo principal de Angular. El módulo encapsula todos los",
       "keywords": "al angular api aplicaci bootstrap cualquier de definici del dentro el encapsula este externos incluyendo ingresar inicia injectados la los mainapp module momento otros overview por primera principal router son todos vez",
+      "isDeprecated": false
+    },
+    {
+      "section": "api",
+      "id": "reviews.controller:reviewsCtrl",
+      "shortName": "reviewsCtrl",
+      "type": "controller",
+      "moduleName": "reviews",
+      "shortDescription": "Definición del controlador de Angular del módulo Reseñas. ",
+      "keywords": "$http $scope $state accedidos actual al angular api atributos backend bookscontext con constante consultas contiene controlador controller crea cual de definen definici definida del dependencia desde donde el en encuentra es estado este funciones html http injectada injectado la las libros los maneja manejar navegaci objeto para pueden recibe referencia rese reviews reviewscontext ruta scope se ser son utilizadas utilizando variables",
+      "isDeprecated": false
+    },
+    {
+      "section": "api",
+      "id": "reviews.module:reviewModule",
+      "shortName": "reviewModule",
+      "type": "overview",
+      "moduleName": "reviews",
+      "shortDescription": "Definición del módulo de Angular de Editorial. El módulo encapsula todos los ",
+      "keywords": "accede al angular angularjs api bajo con configuraci configurar controlador controladores correspondiente cuales de definici definido definidos del dependencia directamente editorial editoriales ejemplo el en encapsula entre es est estado estados este html informa injecta la las list listview localhost los mainview medio module modulo mostrar necesario overview para por relaci relacionados rese reviews reviewslist router se son stateprovider templates todos ui url urls utiliza vista vistas",
       "isDeprecated": false
     }
   ],

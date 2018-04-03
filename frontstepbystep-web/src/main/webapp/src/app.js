@@ -16,7 +16,8 @@
         // Internal modules dependencies       
         'bookModule',
         'authorModule',
-        'editorialModule'
+        'editorialModule',
+        'reviewModule'
 
     ]);
     // Resuelve problemas de las promesas

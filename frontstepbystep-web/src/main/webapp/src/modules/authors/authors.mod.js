@@ -28,15 +28,13 @@
  *```
  */
 (function (ng) {
-    // Definición del módulo
     var mod = ng.module("authorModule", ['ui.router']);
     mod.constant("authorsContext", "api/authors");
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-            // En basePath se encuentran los templates y controladores de módulo
             var basePath = 'src/modules/authors/';
             var basePathBooks = 'src/modules/books/';
             $urlRouterProvider.otherwise("/authorsList");
-            
+
             $stateProvider.state('authors', {
                 url: '/authors',
                 abstract: true,

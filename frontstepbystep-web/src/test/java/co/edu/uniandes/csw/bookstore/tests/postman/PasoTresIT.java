@@ -22,7 +22,7 @@ package co.edu.uniandes.csw.bookstore.tests.postman;
 import co.edu.uniandes.csw.bookstore.resources.AuthorResource;
 import co.edu.uniandes.csw.bookstore.resources.BookResource;
 import co.edu.uniandes.csw.bookstore.resources.EditorialResource;
-import co.edu.uniandes.csw.bookstore.tests.observer.PasoDosDatos;
+import co.edu.uniandes.csw.bookstore.tests.observer.PasoTresDatos;
 import co.edu.uniandes.csw.postman.tests.PostmanTestBuilder;
 import java.io.File;
 import java.io.IOException;
@@ -36,7 +36,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(Arquillian.class)
-public class PasoDosIT {
+public class PasoTresIT {
     
     @Deployment
     public static WebArchive createDeployment() {
@@ -50,8 +50,8 @@ public class PasoDosIT {
                 .addPackage(AuthorResource.class.getPackage())
                 .addPackage(BookResource.class.getPackage())
                 .addPackage(EditorialResource.class.getPackage())
-                // clase para insertar datos para la prueba
-                .addClass(PasoDosDatos.class)
+                // clase para insertar los datos de la prueba
+                .addClass(PasoTresDatos.class)
                 // El archivo que contiene la configuracion a la base de datos.
                 .addAsResource("META-INF/persistence.xml", "META-INF/persistence.xml")
                 // El archivo beans.xml es necesario para injeccion de dependencias.
@@ -65,7 +65,7 @@ public class PasoDosIT {
     public void postman() throws IOException {
         
         PostmanTestBuilder tp = new PostmanTestBuilder();
-        tp.setTestWithoutLogin("paso2.postman_collection");
+        tp.setTestWithoutLogin("paso3.postman_collection");
         String desiredResult = "0";
         if (tp.getAssertions_failed() != null) {
             Assert.assertEquals(desiredResult, tp.getAssertions_failed());

@@ -12,19 +12,19 @@
  * un estado definido (estado de mostrar libros), el controlador y la vista 
  * correspondiente. Los estados definidos en este modulo son:
  * ```
- * | ESTADO          | URL                        | VISTAS                 | DESCRIPCIÓN        |
- * |-----------------|----------------------------|------------------------|--------------------|
- * | books           | /books                     | mainView:              | Estado definido    |
- * |                 |                            | books.html             | para la vista ini- |
- * |                 |                            |                        | cial de libros.    |
- * | booksList       | /list                      | listView:              | Estado definido    |
- * |                 |                            | books.list.html        | para la lista de   |
- * |                 |                            |                        | libros general.    |
- * | bookDetail      | /{bookId:int}/detail       | listView:              | Estado definido    |
- * |                 |                            | books.list.html        | para las vistas del| 
- * |                 |                            | detailView:            | detalle de un libro|
- * |                 |                            | books.detail.html      |                    |
- * |-----------------|----------------------------|------------------------|--------------------|
+ * | ESTADO          | URL                        | VISTAS                 |
+ * |-----------------|----------------------------|------------------------|
+ * | books           | /books                     | mainView:              |
+ * |                 |                            | books.html             |
+ * |                 |                            |                        |
+ * | booksList       | /list                      | listView:              |
+ * |                 |                            | books.list.html        |
+ * |                 |                            |                        |
+ * | bookDetail      | /{bookId:int}/detail       | listView:              |
+ * |                 |                            | books.list.html        |
+ * |                 |                            | detailView:            |
+ * |                 |                            | books.detail.html      |
+ * |-----------------|----------------------------|------------------------|
  *```
  */
 (function (ng) {

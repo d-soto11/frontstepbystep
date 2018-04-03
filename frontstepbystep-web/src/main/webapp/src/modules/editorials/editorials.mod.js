@@ -12,19 +12,19 @@
  * un estado definido (estado de mostrar editoriales), el controlador y la vista 
  * correspondiente. Los estados definidos en este modulo son:
  * ```
- * | ESTADO          | URL                        | VISTAS                 | DESCRIPCIÓN        |
- * |-----------------|----------------------------|------------------------|--------------------|
- * | editorials      | /editorials                | mainView:              | Estado definido    |
- * |                 |                            | editorials.html        | para la vista ini- |
- * |                 |                            |                        | cial de editoriales|
- * | editorialsList  | /list                      | listView:              | Estado definido    |
- * |                 |                            | editorials.list.html   | para la lista de   |
- * |                 |                            |                        | editoriales general|
- * | editorialDetail | /{editorialsId:int}/detail | listView:              | Estado definido    |
- * |                 |                            | books.list.html        | para las vistas del| 
- * |                 |                            | detailView:            | detalle de un libro|
- * |                 |                            | editorials.detail.html |                    |
- * |-----------------|----------------------------|------------------------|--------------------|
+ * | ESTADO          | URL                        | VISTAS                 |
+ * |-----------------|----------------------------|------------------------|
+ * | editorials      | /editorials                | mainView:              |
+ * |                 |                            | editorials.html        |
+ * |                 |                            |                        |
+ * | editorialsList  | /list                      | listView:              |
+ * |                 |                            | editorials.list.html   |
+ * |                 |                            |                        |
+ * | editorialDetail | /{editorialsId:int}/detail | listView:              |
+ * |                 |                            | books.list.html        |
+ * |                 |                            | detailView:            |
+ * |                 |                            | editorials.detail.html |
+ * |-----------------|----------------------------|------------------------|
  *```
  */
 (function (ng) {
@@ -45,8 +45,7 @@
                         controllerAs: 'ctrl'
                     }
                 }
-            })
-            .state('editorialsList', {
+            }).state('editorialsList', {
                 url: '/list',
                 parent: 'editorials',
                 views: {
@@ -54,8 +53,7 @@
                         templateUrl: basePath + 'editorials.list.html'
                     }
                 }
-            })
-            .state('editorialDetail', {
+            }).state('editorialDetail', {
                 url: '/{editorialsId:int}/detail',
                 parent: 'editorials',
                 param: {
