@@ -1,0 +1,118 @@
+{
+	"info": {
+		"name": "paso1",
+		"_postman_id": "eefb3f1d-fcca-e406-9450-c9a1d13d17ae",
+		"description": "test postman para cada uno de los pasos del tutorial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listar libros",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "af77b90e-6bd5-43be-8992-846644c1fc7a",
+						"type": "text/javascript",
+						"exec": [
+							"var data= JSON.parse(responseBody);",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/frontstepbystep-web/api/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"frontstepbystep-web",
+						"api",
+						"books"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "listar autores",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c7655566-7ada-4a96-b95b-ced162ff5fc6",
+						"type": "text/javascript",
+						"exec": [
+							"var data = JSON.parse(responseBody);",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/frontstepbystep-web/api/authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"frontstepbystep-web",
+						"api",
+						"authors"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "listar editoriales",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "048079f3-0eb5-4573-8987-c723eea18a42",
+						"type": "text/javascript",
+						"exec": [
+							"var data = JSON.parse(responseBody);",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/frontstepbystep-web/api/editorials",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"frontstepbystep-web",
+						"api",
+						"editorials"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
