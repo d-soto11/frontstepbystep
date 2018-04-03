@@ -12,23 +12,26 @@
  * un estado definido (estado de mostrar editoriales), el controlador y la vista 
  * correspondiente. Los estados definidos en este modulo son:
  * ```
- * | ESTADO          | URL                        | VISTAS                 |
- * |-----------------|----------------------------|------------------------|
- * | editorials      | /editorials                | mainView:              |
- * |                 |                            | editorials.html        |
- * |                 |                            |                        |
- * | editorialsList  | /list                      | listView:              |
- * |                 |                            | editorials.list.html   |
- * |                 |                            |                        |
- * | editorialDetail | /{editorialsId:int}/detail | listView:              |
- * |                 |                            | books.list.html        |
- * |                 |                            | detailView:            |
- * |                 |                            | editorials.detail.html |
- * |-----------------|----------------------------|------------------------|
+ * | ESTADO           | URL                        | VISTAS                 |
+ * |------------------|----------------------------|------------------------|
+ * | editorials       | /editorials                | mainView:              |
+ * |                  |                            | editorials.html        |
+ * | editorialsList   | /list                      | listView:              |
+ * |                  |                            | editorials.list.html   |
+ * | editorialDetail  | /{editorialsId:int}/detail | listView:              |
+ * |                  |                            | books.list.html        |
+ * |                  |                            | detailView:            |
+ * |                  |                            | editorials.detail.html |
+ * | editorialsCreate | /create                    | detailView: (/new)     |
+ * |                  |                            | /editorials.new.html   |
+ * | editorialUpdate  | /update/{editorialId:int}  | detailView: (/new)     |
+ * |                  |                            | /editorials.new.html   |
+ * | editorialDelete  | /delete/{editorialId:int}  | detailView: (/delete)  |
+ * |                  |                            | /editorials.delete.html|
+ * |------------------|----------------------------|------------------------|
  *```
  */
 (function (ng) {
-    // Definición del módulo
     var mod = ng.module("editorialModule", ['ui.router']);
     mod.constant("editorialsContext", "api/editorials");
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
@@ -69,6 +72,39 @@
                         templateUrl: basePath + 'editorials.detail.html',
                         controller: 'editorialDetailCtrl',
                         controllerAs: 'ctrl'
+                    }
+                }
+            }).state('editorialsCreate', {
+                url: '/create',
+                parent: 'editorials',
+                views: {
+                    'detailView': {
+                        templateUrl: basePath + '/new/editorials.new.html',
+                        controller: 'editorialNewCtrl'
+                    }
+                }
+            }).state('editorialUpdate', {
+                url: '/update/{editorialId:int}',
+                parent: 'editorials',
+                param: {
+                    editorialId: null
+                },
+                views: {
+                    'detailView': {
+                        templateUrl: basePath + '/new/editorials.new.html',
+                        controller: 'editorialUpdateCtrl'
+                    }
+                }
+            }).state('editorialDelete', {
+                url: '/delete/{editorialId:int}',
+                parent: 'editorials',
+                param: {
+                    editorialId: null
+                },
+                views: {
+                    'detailView': {
+                        templateUrl: basePath + '/delete/editorials.delete.html',
+                        controller: 'editorialDeleteCtrl'
                     }
                 }
             });

@@ -75,6 +75,16 @@ NG_DOCS={
     },
     {
       "section": "api",
+      "id": "editorials.controller:editorialDeleteCtrl",
+      "shortName": "editorialDeleteCtrl",
+      "type": "controller",
+      "moduleName": "editorials",
+      "shortDescription": "Definición del controlador auxiliar para eliminar Editoriales. ",
+      "keywords": "$http $scope $state actual al api auxiliar backend constante consultas contiene controlador controller de definen definici definida del deleteeditorial dependencia desde donde editorial editorialcontext editoriales editorials el eliminar en encuentra es esta estado este funci funciones function html http injectada injectado la las manejar navegaci objeto para protocolo recibe referencia ruta scope se son utiliza utilizadas variables",
+      "isDeprecated": false
+    },
+    {
+      "section": "api",
       "id": "editorials.controller:editorialDetailCtrl",
       "shortName": "editorialDetailCtrl",
       "type": "controller",
@@ -85,12 +95,32 @@ NG_DOCS={
     },
     {
       "section": "api",
+      "id": "editorials.controller:editorialNewCtrl",
+      "shortName": "editorialNewCtrl",
+      "type": "controller",
+      "moduleName": "editorials",
+      "shortDescription": "Definición del controlador auxiliar para crear Editoriales. ",
+      "keywords": "$http $rootscope $scope $state actual al api aplicaci auxiliar backend con constante consultas contiene controlador controller crear createeditorial de definen definici definida del dependencia desde donde editorial editorialcontext editoriales editorials el en encuentra es esta estado este funci funciones function html http injectada injectado la las manejar navegaci nueva objeto para protocolo recibe referencia ruta scope se son toda utiliza utilizadas variables",
+      "isDeprecated": false
+    },
+    {
+      "section": "api",
+      "id": "editorials.controller:editorialUpdateCtrl",
+      "shortName": "editorialUpdateCtrl",
+      "type": "controller",
+      "moduleName": "editorials",
+      "shortDescription": "Definición del controlador auxiliar para actualizar Editoriales. ",
+      "keywords": "$http $scope $state actual actualizar al api auxiliar backend bookscontext con constante consultar consultas contiene controlador controller createeditorial de definen definici definida del dependencia desde direcci donde editorial editorialcontext editoriales editorials el en encuentra es esta estado este formato funci funciones function geteditorialid html http informaci injectada injectado json la las libros manejar navegaci nueva objeto obtener para por protocolo puede recibe recurso referencia ruta scope se son url utiliza utilizadas variables",
+      "isDeprecated": false
+    },
+    {
+      "section": "api",
       "id": "editorials.module:editorialModule",
       "shortName": "editorialModule",
       "type": "overview",
       "moduleName": "editorials",
       "shortDescription": "Definición del módulo de Angular de Editorial. El módulo encapsula todos los ",
-      "keywords": "accede al angular angularjs api bajo books con configuraci configurar controlador controladores correspondiente cuales de definici definido definidos del dependencia detail detailview directamente editorial editorialdetail editoriales editorials editorialslist ejemplo el en encapsula entre es est estado estados este html informa injecta la las list listview localhost los mainview medio module modulo mostrar necesario overview para por relaci relacionados router se son stateprovider templates todos ui url urls utiliza vista vistas",
+      "keywords": "accede al angular angularjs api bajo books con configuraci configurar controlador controladores correspondiente cuales de definici definido definidos del delete dependencia detail detailview directamente editorial editorialdelete editorialdetail editoriales editorials editorialscreate editorialslist editorialupdate ejemplo el en encapsula entre es est estado estados este html informa injecta la las list listview localhost los mainview medio module modulo mostrar necesario overview para por relaci relacionados router se son stateprovider templates todos ui url urls utiliza vista vistas",
       "isDeprecated": false
     },
     {
