@@ -15,6 +15,16 @@ NG_DOCS={
     },
     {
       "section": "api",
+      "id": "authors.controller:authorDeleteCtrl",
+      "shortName": "authorDeleteCtrl",
+      "type": "controller",
+      "moduleName": "authors",
+      "shortDescription": "Definición del controlador auxiliar para eliminar Autores. ",
+      "keywords": "$http $scope $state actual al api authors authorscontext autor autores auxiliar backend constante consultas contiene controlador controller de definen definici definida del deleteauthor dependencia desde donde el eliminar en encuentra es esta estado este funci funciones function html http injectada injectado la las manejar navegaci objeto para protocolo recibe referencia ruta scope se son utiliza utilizadas variables",
+      "isDeprecated": false
+    },
+    {
+      "section": "api",
       "id": "authors.controller:authorDetailCtrl",
       "shortName": "authorDetailCtrl",
       "type": "controller",
@@ -25,12 +35,32 @@ NG_DOCS={
     },
     {
       "section": "api",
+      "id": "authors.controller:authorNewCtrl",
+      "shortName": "authorNewCtrl",
+      "type": "controller",
+      "moduleName": "authors",
+      "shortDescription": "Definición del controlador auxiliar para crear Autores. ",
+      "keywords": "$http $rootscope $scope $state actual al api aplicaci authors authorscontext autor autores auxiliar backend bookscontext con constante consultas contiene controlador controller crear createeditorial de definen definici definida del dependencia desde donde el en encuentra es esta estado este funci funciones function html http injectada injectado la las libros manejar navegaci nuevo objeto para protocolo recibe referencia ruta scope se son toda utiliza utilizadas variables",
+      "isDeprecated": false
+    },
+    {
+      "section": "api",
+      "id": "authors.controller:authorUpdateCtrl",
+      "shortName": "authorUpdateCtrl",
+      "type": "controller",
+      "moduleName": "authors",
+      "shortDescription": "Definición del controlador auxiliar para actualizar Autores. ",
+      "keywords": "$filter $http $scope $state actual actualizar al api arreglos asociado asociados authors authorscontext autor autores auxiliar backend books bookscontext busca con constante consultas contiene controlador controller crea createauthor de definen definici definida del dependencia desde donde el en encuentra es esta estado este filtros funci funciones function getbooks hacer html http ids informaci injectada injectado la las libros los manejar mergebooks navegaci newbooks nuevo nuevos objeto para recarga recibe referencia ruta scope se sobre son tiene utilizadas variables ya",
+      "isDeprecated": false
+    },
+    {
+      "section": "api",
       "id": "authors.module:authorModule",
       "shortName": "authorModule",
       "type": "overview",
       "moduleName": "authors",
       "shortDescription": "Definición del módulo de Angular de Autores. El módulo encapsula todos los ",
-      "keywords": "accede al angular angularjs api authordetail authors authorslist autor autores bajo cial con configuraci configurar controlador controladores correspondiente cuales de definici definido definidos del dependencia descripci detail detailview detalle directamente ejemplo el en encapsula entre es est estado estados este general html informa ini- injecta la las list lista listview localhost los mainview medio module modulo mostrar necesario overview para por relaci relacionados router se son stateprovider templates todos ui url urls utiliza vista vistas",
+      "keywords": "accede al angular angularjs api authordelete authordetail authors authorscreate authorslist authorupdate autores bajo con configuraci configurar controlador controladores correspondiente cuales de definici definido definidos del delete dependencia detail detailview directamente ejemplo el en encapsula entre es est estado estados este html informa injecta la las list listview localhost los mainview medio module modulo mostrar necesario overview para por relaci relacionados router se son stateprovider templates todos ui url urls utiliza vista vistas",
       "isDeprecated": false
     },
     {

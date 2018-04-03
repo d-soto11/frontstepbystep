@@ -1,0 +1,47 @@
+<h1><code ng:non-bindable="">authorUpdateCtrl</code>
+<div><span class="hint">controller in module <code ng:non-bindable="">authors</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="authors-controller-page authors-controller-authorupdatectrl-page"><p>Definición del controlador auxiliar para actualizar Autores. </p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">authorUpdateCtrl($scope, $http, authorsContext, $state, booksContext, $filter);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="authors-controller-page authors-controller-authorupdatectrl-page"><p>Referencia injectada al Scope definida para este
+controlador, el scope es el objeto que contiene las variables o 
+funciones que se definen en este controlador y que son utilizadas 
+desde el HTML.</p>
+</div></td></tr><tr><td>$http</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="authors-controller-page authors-controller-authorupdatectrl-page"><p>Objeto injectado para la manejar consultas HTTP</p>
+</div></td></tr><tr><td>authorsContext</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="authors-controller-page authors-controller-authorupdatectrl-page"><p>Constante injectada que contiene la ruta
+donde se encuentra el API de Autores en el Backend.</p>
+</div></td></tr><tr><td>$state</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="authors-controller-page authors-controller-authorupdatectrl-page"><p>Dependencia injectada en la que se recibe el
+estado actual de la navegación definida en el módulo.</p>
+</div></td></tr><tr><td>booksContext</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="authors-controller-page authors-controller-authorupdatectrl-page"><p>Constante injectada que contiene la ruta
+donde se encuentra el API de Libros en el Backend.</p>
+</div></td></tr><tr><td>$filter</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="authors-controller-page authors-controller-authorupdatectrl-page"><p>Dependencia injectada para hacer filtros sobre
+arreglos.</p>
+</div></td></tr></tbody></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_createauthor">createAuthor()</h3>
+<div class="createauthor"><div class="createauthor-page"><p>Crea un nuevo autor con los libros nuevos y la información del
+$scope.</p>
+</div></div>
+</li>
+<li><h3 id="methods_getbooks">getBooks(books)</h3>
+<div class="getbooks"><div class="getbooks-page"><p>Esta función recarga la información de los libros del autor.</p>
+</div><h5 id="methods_getbooks_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>books</td><td><a href="" class="label type-hint type-hint-object">[Object]</a></td><td><div class="getbooks-page"><p>Los libros a actualizar del autor</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_mergebooks">mergeBooks(books)</h3>
+<div class="mergebooks"><div class="mergebooks-page"><p>Esta función añade los ids de los books que ya tiene el autor asociado.</p>
+</div><h5 id="methods_mergebooks_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>books</td><td><a href="" class="label type-hint type-hint-object">[Object]</a></td><td><div class="mergebooks-page"><p>Los libros asociados al autor</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_newbooks">newBooks()</h3>
+<div class="newbooks"><div class="newbooks-page"><p>Busca los nuevos libros en el $scope.</p>
+</div></div>
+</li>
+</ul>
+</div>
+</div>

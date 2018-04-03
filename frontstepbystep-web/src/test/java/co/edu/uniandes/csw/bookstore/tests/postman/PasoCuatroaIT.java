@@ -35,7 +35,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(Arquillian.class)
-public class PasoCuatroIT {
+public class PasoCuatroaIT {
     
     @Deployment
     public static WebArchive createDeployment() {
@@ -49,7 +49,7 @@ public class PasoCuatroIT {
                 .addPackage(AuthorResource.class.getPackage())
                 .addPackage(BookResource.class.getPackage())
                 .addPackage(EditorialResource.class.getPackage())
-             
+                
                 // El archivo que contiene la configuracion a la base de datos.
                 .addAsResource("META-INF/persistence.xml", "META-INF/persistence.xml")
                 // El archivo beans.xml es necesario para injeccion de dependencias.
@@ -63,7 +63,7 @@ public class PasoCuatroIT {
     public void postman() throws IOException {
         
         PostmanTestBuilder tp = new PostmanTestBuilder();
-        tp.setTestWithoutLogin("paso4.postman_collection");
+        tp.setTestWithoutLogin("paso4-a.postman_collection");
         String desiredResult = "0";
         if (tp.getAssertions_failed() != null) {
             Assert.assertEquals(desiredResult, tp.getAssertions_failed());

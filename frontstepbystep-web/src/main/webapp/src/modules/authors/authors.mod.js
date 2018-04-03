@@ -12,19 +12,25 @@
  * un estado definido (estado de mostrar autores), el controlador y la vista 
  * correspondiente. Los estados definidos en este modulo son:
  * ```
- * | ESTADO          | URL                        | VISTAS                 | DESCRIPCIÓN        |
- * |-----------------|----------------------------|------------------------|--------------------|
- * | authors         | /authors                   | mainView:              | Estado definido    |
- * |                 |                            | authors.html           | para la vista ini- |
- * |                 |                            |                        | cial de autores.   |
- * | authorsList     | /list                      | listView:              | Estado definido    |
- * |                 |                            | authors.list.html      | para la lista de   |
- * |                 |                            |                        | autores general.   |
- * | authorDetail    | /{authorId:int}/detail     | listView:              | Estado definido    |
- * |                 |                            | authors.list.html      | para las vistas del| 
- * |                 |                            | detailView:            | detalle de un autor|
- * |                 |                            | authors.detail.html    |                    |
- * |-----------------|----------------------------|------------------------|--------------------|
+ * | ESTADO           | URL                        | VISTAS                 |
+ * |------------------|----------------------------|------------------------|
+ * | authors          | /authors                   | mainView:              |
+ * |                  |                            | authors.html           |
+ * |                  |                            |                        |
+ * | authorsList      | /list                      | listView:              |
+ * |                  |                            | authors.list.html      |
+ * |                  |                            |                        |
+ * | authorDetail     | /{authorId:int}/detail     | listView:              |
+ * |                  |                            | authors.list.html      |
+ * |                  |                            | detailView:            |
+ * |                  |                            | authors.detail.html    |
+ * | authorsCreate    | /create                    | detailView: (/new)     |
+ * |                  |                            | /authors.new.html      |
+ * | authorUpdate     | /update/{authorId:int}     | detailView: (/new)     |
+ * |                  |                            | /authors.new.html      |
+ * | authorDelete     | /delete/{authorId:int}     | detailView: (/delete)  |
+ * |                  |                            | /author.delete.html    |
+ * |------------------|----------------------------|------------------------|
  *```
  */
 (function (ng) {
@@ -69,6 +75,39 @@
                         templateUrl: basePath + 'authors.detail.html',
                         controller: 'authorDetailCtrl',
                         controllerAs: 'ctrl'
+                    }
+                }
+            }).state('authorsCreate', {
+                url: '/create',
+                parent: 'authors',
+                views: {
+                    'detailView': {
+                        templateUrl: basePath + '/new/authors.new.html',
+                        controller: 'authorNewCtrl'
+                    }
+                }
+            }).state('authorUpdate', {
+                url: '/update/{authorId:int}',
+                parent: 'authors',
+                param: {
+                    authorId: null
+                },
+                views: {
+                    'detailView': {
+                        templateUrl: basePath + '/new/authors.new.html',
+                        controller: 'authorUpdateCtrl'
+                    }
+                }
+            }).state('authorDelete', {
+                url: '/delete/{authorId:int}',
+                parent: 'authors',
+                param: {
+                    authorId: null
+                },
+                views: {
+                    'detailView': {
+                        templateUrl: basePath + '/delete/author.delete.html',
+                        controller: 'authorDeleteCtrl'
                     }
                 }
             });
