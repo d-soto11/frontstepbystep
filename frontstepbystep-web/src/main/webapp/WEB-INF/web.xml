@@ -3,4 +3,12 @@
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>
+    <servlet>
+        <servlet-name>ArquillianServletRunner</servlet-name>
+        <servlet-class>org.jboss.arquillian.protocol.servlet.runner.ServletTestRunner</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ArquillianServletRunner</servlet-name>
+        <url-pattern>/ArquillianServletRunner</url-pattern>
+    </servlet-mapping>
 </web-app>

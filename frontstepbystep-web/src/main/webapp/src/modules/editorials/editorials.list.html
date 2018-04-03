@@ -1,6 +1,5 @@
-<alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert()">{{alert.msg}} </alert>
-<div class="container-fluid">
-    <div class="col-md-4">
+<div class="col-md-4">
+    <div class="container-fluid">   
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -9,7 +8,7 @@
             </thead>
             <tbody>
                 <tr ng-repeat="editorial in editorialsRecords">
-                    <td id="{{$index}}-name">{{editorial.name}}</td>                                  
+                    <td id="{{$index}}-name"><a ui-sref="editorialDetail({editorialsId: editorial.id})">{{editorial.name}}</a></td>
                 </tr>
             </tbody>
         </table>

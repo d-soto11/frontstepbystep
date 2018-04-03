@@ -11,5 +11,18 @@ cuales se accede al módulo. Por ejemplo, para mostrar los autores en la
 URL: &#39;localhost:8080/authors/list&#39; es necesario configurar el router por 
 medio del stateProvider que informa a AngularJS de la relación entre la URL, 
 un estado definido (estado de mostrar autores), el controlador y la vista 
-correspondiente.</p>
-</div></div>
+correspondiente. Los estados definidos en este modulo son:</p>
+<pre><code>| ESTADO          | URL                        | VISTAS                 | DESCRIPCIÓN        |
+|-----------------|----------------------------|------------------------|--------------------|
+| authors         | /authors                   | mainView:              | Estado definido    |
+|                 |                            | authors.html           | para la vista ini- |
+|                 |                            |                        | cial de autores.   |
+| authorsList     | /list                      | listView:              | Estado definido    |
+|                 |                            | authors.list.html      | para la lista de   |
+|                 |                            |                        | autores general.   |
+| authorDetail    | /{authorId:int}/detail     | listView:              | Estado definido    |
+|                 |                            | authors.list.html      | para las vistas del| 
+|                 |                            | detailView:            | detalle de un autor|
+|                 |                            | authors.detail.html    |                    |
+|-----------------|----------------------------|------------------------|--------------------|
+</code></pre></div></div>

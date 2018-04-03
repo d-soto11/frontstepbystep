@@ -11,5 +11,18 @@ cuales se accede al módulo. Por ejemplo, para mostrar los libros en la
 URL: &#39;localhost:8080/books/list&#39; es necesario configurar el router por 
 medio del stateProvider que informa a AngularJS de la relación entre la URL, 
 un estado definido (estado de mostrar libros), el controlador y la vista 
-correspondiente.</p>
-</div></div>
+correspondiente. Los estados definidos en este modulo son:</p>
+<pre><code>| ESTADO          | URL                        | VISTAS                 | DESCRIPCIÓN        |
+|-----------------|----------------------------|------------------------|--------------------|
+| books           | /books                     | mainView:              | Estado definido    |
+|                 |                            | books.html             | para la vista ini- |
+|                 |                            |                        | cial de libros.    |
+| booksList       | /list                      | listView:              | Estado definido    |
+|                 |                            | books.list.html        | para la lista de   |
+|                 |                            |                        | libros general.    |
+| bookDetail      | /{bookId:int}/detail       | listView:              | Estado definido    |
+|                 |                            | books.list.html        | para las vistas del| 
+|                 |                            | detailView:            | detalle de un libro|
+|                 |                            | books.detail.html      |                    |
+|-----------------|----------------------------|------------------------|--------------------|
+</code></pre></div></div>

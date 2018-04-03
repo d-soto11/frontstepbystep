@@ -10,29 +10,69 @@
  * URL: 'localhost:8080/editorials/list' es necesario configurar el router por 
  * medio del stateProvider que informa a AngularJS de la relación entre la URL, 
  * un estado definido (estado de mostrar editoriales), el controlador y la vista 
- * correspondiente.
+ * correspondiente. Los estados definidos en este modulo son:
+ * ```
+ * | ESTADO          | URL                        | VISTAS                 | DESCRIPCIÓN        |
+ * |-----------------|----------------------------|------------------------|--------------------|
+ * | editorials      | /editorials                | mainView:              | Estado definido    |
+ * |                 |                            | editorials.html        | para la vista ini- |
+ * |                 |                            |                        | cial de editoriales|
+ * | editorialsList  | /list                      | listView:              | Estado definido    |
+ * |                 |                            | editorials.list.html   | para la lista de   |
+ * |                 |                            |                        | editoriales general|
+ * | editorialDetail | /{editorialsId:int}/detail | listView:              | Estado definido    |
+ * |                 |                            | books.list.html        | para las vistas del| 
+ * |                 |                            | detailView:            | detalle de un libro|
+ * |                 |                            | editorials.detail.html |                    |
+ * |-----------------|----------------------------|------------------------|--------------------|
+ *```
  */
 (function (ng) {
     // Definición del módulo
     var mod = ng.module("editorialModule", ['ui.router']);
-    // Configuración de los estados del módulo
+    mod.constant("editorialsContext", "api/editorials");
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-            // En basePath se encuentran los templates y controladores de módulo
             var basePath = 'src/modules/editorials/';
-            // Mostrar la lista de editoriales será el estado por defecto del módulo
+            var basePathBooks = 'src/modules/books/';
             $urlRouterProvider.otherwise("/editorialsList");
-            // Definición del estado 'editorialsList' donde se listan los editoriales
-            $stateProvider.state('editorialsList', {
-                // Url que aparecerá en el browser
-                url: '/editorials/list',
+            $stateProvider.state('editorials', {
+                url: '/editorials',
+                abstract: true,
                 views: {
                     'mainView': {
-                        templateUrl: basePath + 'editorials.list.html',
+                        templateUrl: basePath + 'editorials.html',
                         controller: 'editorialCtrl',
                         controllerAs: 'ctrl'
                     }
                 }
+            })
+            .state('editorialsList', {
+                url: '/list',
+                parent: 'editorials',
+                views: {
+                    'listView': {
+                        templateUrl: basePath + 'editorials.list.html'
+                    }
+                }
+            })
+            .state('editorialDetail', {
+                url: '/{editorialsId:int}/detail',
+                parent: 'editorials',
+                param: {
+                    editorialsId: null
+                },
+                views: {
+                    'listView': {
+                        templateUrl: basePathBooks + 'books.list.html',
+                        controller: 'editorialDetailCtrl',
+                        controllerAs: 'ctrl'
+                    },
+                    'detailView': {
+                        templateUrl: basePath + 'editorials.detail.html',
+                        controller: 'editorialDetailCtrl',
+                        controllerAs: 'ctrl'
+                    }
+                }
             });
-        }
-    ]);
+        }]);
 })(window.angular);

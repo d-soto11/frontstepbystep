@@ -1,7 +1,7 @@
 (function (ng) {
     var mod = ng.module("editorialModule");
     mod.constant("editorialContext", "api/editorials");
-    mod.controller('editorialCtrl', ['$scope', '$http', 'editorialContext',
+    mod.controller('editorialCtrl', ['$scope', '$http', 'editorialContext', '$state',
         /**
          * @ngdoc controller
          * @name editorials.controller:editorialCtrl
@@ -17,8 +17,10 @@
          * @param {Object} $http Objeto injectado para la manejar consultas HTTP
          * @param {Object} editorialContext Constante injectada que contiene la ruta
          * donde se encuentra el API de Editoriales en el Backend.
+         * @param {Object} $state Dependencia injectada en la que se recibe el 
+         * estado actual de la navegación definida en el módulo.
          */
-        function ($scope, $http, editorialContext) {
+        function ($scope, $http, editorialContext, $state) {
             /**
              * @ngdoc function
              * @name getEditorials
@@ -32,7 +34,7 @@
              * @param {String} URL Dirección donde se encuentra el recurso
              * de las editoriales o API donde se puede consultar.
              */
-            $http.get('data/editorials.json').then(function (response) {
+            $http.get(editorialContext).then(function (response) {
                 $scope.editorialsRecords = response.data;
             });
         }

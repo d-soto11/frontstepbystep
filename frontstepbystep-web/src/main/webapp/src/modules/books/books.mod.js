@@ -10,29 +10,68 @@
  * URL: 'localhost:8080/books/list' es necesario configurar el router por 
  * medio del stateProvider que informa a AngularJS de la relación entre la URL, 
  * un estado definido (estado de mostrar libros), el controlador y la vista 
- * correspondiente.
+ * correspondiente. Los estados definidos en este modulo son:
+ * ```
+ * | ESTADO          | URL                        | VISTAS                 | DESCRIPCIÓN        |
+ * |-----------------|----------------------------|------------------------|--------------------|
+ * | books           | /books                     | mainView:              | Estado definido    |
+ * |                 |                            | books.html             | para la vista ini- |
+ * |                 |                            |                        | cial de libros.    |
+ * | booksList       | /list                      | listView:              | Estado definido    |
+ * |                 |                            | books.list.html        | para la lista de   |
+ * |                 |                            |                        | libros general.    |
+ * | bookDetail      | /{bookId:int}/detail       | listView:              | Estado definido    |
+ * |                 |                            | books.list.html        | para las vistas del| 
+ * |                 |                            | detailView:            | detalle de un libro|
+ * |                 |                            | books.detail.html      |                    |
+ * |-----------------|----------------------------|------------------------|--------------------|
+ *```
  */
 (function (ng) {
-    // Definición del módulo
     var mod = ng.module("bookModule", ['ui.router']);
-    // Configuración de los estados del módulo
+    mod.constant("booksContext", "api/books");
     mod.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-            // En basePath se encuentran los templates y controladores de módulo
             var basePath = 'src/modules/books/';
-            // Mostrar la lista de libros será el estado por defecto del módulo
             $urlRouterProvider.otherwise("/booksList");
-            // Definición del estado 'booksList' donde se listan los libros
-            $stateProvider.state('booksList', {
-                // Url que aparecerá en el browser
-                url: '/books/list',
-                 views: {
+
+            $stateProvider.state('books', {
+                url: '/books',
+                abstract: true,
+                views: {
                     'mainView': {
-                        templateUrl: basePath + 'books.list.html',
+                        templateUrl: basePath + 'books.html',
                         controller: 'bookCtrl',
                         controllerAs: 'ctrl'
                     }
                 }
+            }).state('booksList', {
+                url: '/list',
+                parent: 'books',
+                views: {
+                    'listView': {
+                        templateUrl: basePath + 'books.list.html'
+                    }
+                }
+            }).state('bookDetail', {
+                url: '/{bookId:int}/detail',
+                parent: 'books',
+                param: {
+                    bookId: null
+                },
+                views: {
+                    'listView': {
+                        templateUrl: basePath + 'books.list.html',
+                        controller: 'bookDetailCtrl',
+                        controllerAs: 'ctrl'
+                    },
+                    'detailView': {
+                        templateUrl: basePath + 'books.detail.html',
+                        controller: 'bookDetailCtrl',
+                        controllerAs: 'ctrl'
+                    }
+
+                }
+
             });
-        }
-    ]);
+        }]);
 })(window.angular);

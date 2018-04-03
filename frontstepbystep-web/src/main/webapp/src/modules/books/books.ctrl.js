@@ -1,7 +1,7 @@
 (function (ng) {
     var mod = ng.module("bookModule");
     mod.constant("booksContext", "api/books");
-    mod.controller('bookCtrl', ['$scope', '$http', 'booksContext',
+    mod.controller('bookCtrl', ['$scope', '$http', 'booksContext', '$state',
         /**
          * @ngdoc controller
          * @name books.controller:bookCtrl
@@ -17,8 +17,10 @@
          * @param {Object} $http Objeto injectado para la manejar consultas HTTP
          * @param {Object} booksContext Constante injectada que contiene la ruta
          * donde se encuentra el API de Libros en el Backend.
+         * @param {Object} $state Dependencia injectada en la que se recibe el 
+         * estado actual de la navegación definida en el módulo.
          */
-        function ($scope, $http, booksContext) {
+        function ($scope, $http, booksContext, $state) {
             /**
              * @ngdoc function
              * @name getBooks
@@ -32,7 +34,7 @@
              * @param {String} URL Dirección donde se encuentra el recurso
              * de los libros o API donde se puede consultar.
              */
-            $http.get('data/books.json').then(function (response) {
+            $http.get(booksContext).then(function (response) {
                 $scope.booksRecords = response.data;
             });
         }

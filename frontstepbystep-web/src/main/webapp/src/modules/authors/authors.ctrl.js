@@ -1,7 +1,7 @@
 (function (ng) {
     var mod = ng.module("authorModule");
     mod.constant("authorsContext", "api/authors");
-    mod.controller('authorCtrl', ['$scope', '$http', 'authorsContext',
+    mod.controller('authorCtrl', ['$scope', '$http', 'authorsContext', '$state',
         /**
          * @ngdoc controller
          * @name authors.controller:authorCtrl
@@ -17,8 +17,10 @@
          * @param {Object} $http Objeto injectado para la manejar consultas HTTP
          * @param {Object} authorsContext Constante injectada que contiene la ruta
          * donde se encuentra el API de Autores en el Backend.
+         * @param {Object} $state Dependencia injectada en la que se recibe el 
+         * estado actual de la navegación definida en el módulo.
          */
-        function ($scope, $http, authorsContext) {
+        function ($scope, $http, authorsContext, $state) {
             /**
              * @ngdoc function
              * @name getAuthors
@@ -30,9 +32,10 @@
              * automáticamente cuando el controlador es accedido desde el
              * navegador.
              * @param {String} URL Dirección donde se encuentra el recurso
-             * de los autores o API donde se puede consultar.
+             * de los autores o API donde se puede consultar. Se utiliza el
+             * contexto definido anteriormente.
              */
-            $http.get('data/authors.json').then(function (response) {
+            $http.get(authorsContext).then(function (response) {
                 $scope.authorsRecords = response.data;
             });
         }

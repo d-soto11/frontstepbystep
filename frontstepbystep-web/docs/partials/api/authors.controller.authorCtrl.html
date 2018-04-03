@@ -10,7 +10,7 @@ En el controlador se definen los atributos y métodos que pueden
 ser accedidos desde el HTML utilizando el $scope.</p>
 </div></div>
 <h2 id="usage">Usage</h2>
-<div class="usage"><pre class="prettyprint linenums">authorCtrl($scope, $http, authorsContext);</pre>
+<div class="usage"><pre class="prettyprint linenums">authorCtrl($scope, $http, authorsContext, $state);</pre>
 <h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="authors-controller-page authors-controller-authorctrl-page"><p>Referencia injectada al Scope definida para este
 controlador, el scope es el objeto que contiene las variables o 
 funciones que se definen en este controlador y que son utilizadas 
@@ -18,6 +18,8 @@ desde el HTML.</p>
 </div></td></tr><tr><td>$http</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="authors-controller-page authors-controller-authorctrl-page"><p>Objeto injectado para la manejar consultas HTTP</p>
 </div></td></tr><tr><td>authorsContext</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="authors-controller-page authors-controller-authorctrl-page"><p>Constante injectada que contiene la ruta
 donde se encuentra el API de Autores en el Backend.</p>
+</div></td></tr><tr><td>$state</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="authors-controller-page authors-controller-authorctrl-page"><p>Dependencia injectada en la que se recibe el
+estado actual de la navegación definida en el módulo.</p>
 </div></td></tr></tbody></table></div>
 <div class="member method"><h2 id="methods">Methods</h2>
 <ul class="methods"><li><h3 id="methods_getauthors">getAuthors(URL)</h3>
@@ -27,7 +29,8 @@ puede ser un archivo o un API Rest. La función se ejecuta
 automáticamente cuando el controlador es accedido desde el
 navegador.</p>
 </div><h5 id="methods_getauthors_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>URL</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="getauthors-page"><p>Dirección donde se encuentra el recurso
-de los autores o API donde se puede consultar.</p>
+de los autores o API donde se puede consultar. Se utiliza el
+contexto definido anteriormente.</p>
 </div></td></tr></tbody></table></div>
 </li>
 </ul>
