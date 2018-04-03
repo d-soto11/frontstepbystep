@@ -141,10 +141,9 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "a9106145-e2ac-41f4-aed3-c3c0299b0065",
+						"id": "c4bf2ccd-09f6-4352-a713-de9aa24e5713",
 						"type": "text/javascript",
 						"exec": [
-							"",
 							""
 						]
 					}

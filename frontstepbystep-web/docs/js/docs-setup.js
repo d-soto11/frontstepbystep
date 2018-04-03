@@ -50,7 +50,7 @@ NG_DOCS={
       "type": "controller",
       "moduleName": "authors",
       "shortDescription": "Definición del controlador auxiliar para actualizar Autores. ",
-      "keywords": "$filter $http $scope $state actual actualizar al api arreglos asociado asociados authors authorscontext autor autores auxiliar backend books bookscontext busca con constante consultas contiene controlador controller crea createauthor de definen definici definida del dependencia desde donde el en encuentra es esta estado este filtros funci funciones function getbooks hacer html http ids informaci injectada injectado la las libros los manejar mergebooks navegaci newbooks nuevo nuevos objeto para recarga recibe referencia ruta scope se sobre son tiene utilizadas variables ya",
+      "keywords": "$filter $http $scope $state actual actualizar al api arreglos authors authorscontext autor autores auxiliar backend books bookscontext con constante consultas contiene controlador controller crea createauthor de definen definici definida del dependencia desde donde el en encuentra es esta estado este filtros funci funciones function getbooks hacer html http informaci injectada injectado la las libros los manejar navegaci nuevo nuevos objeto para recarga recibe referencia ruta scope se sobre son utilizadas variables",
       "isDeprecated": false
     },
     {
@@ -91,6 +91,16 @@ NG_DOCS={
       "moduleName": "books",
       "shortDescription": "Definición del módulo de Angular de Libros. El módulo encapsula todos los ",
       "keywords": "accede al angular angularjs api bajo bookdetail books bookslist con configuraci configurar controlador controladores correspondiente cuales de definici definido definidos del dependencia detail detailview directamente ejemplo el en encapsula entre es est estado estados este html informa injecta la las libros list listview localhost los mainview medio module modulo mostrar necesario overview para por relaci relacionados router se son stateprovider templates todos ui url urls utiliza vista vistas",
+      "isDeprecated": false
+    },
+    {
+      "section": "api",
+      "id": "directive:moveLists",
+      "shortName": "moveLists",
+      "type": "directive",
+      "moduleName": "directive:moveLists",
+      "shortDescription": "Crea una vista que permite intercambiar elementos entre dos arreglos",
+      "keywords": "api arreglos availableitems crea de directive dos elementos entre intercambiar items lista permite posibles seleccionades selected selecteditems una vista",
       "isDeprecated": false
     },
     {
